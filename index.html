@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraksha Sonic — Real-Time Voice-Clone Interception for Banking Calls</title>
+<meta name="description" content="Suraksha Sonic / Voice Shield detects AI-cloned voices in-stream during banking calls using AASIST and autonomously freezes fraudulent wire transfers before money moves.">
+<meta name="keywords" content="voice cloning detection, deepfake detection, AASIST, banking fraud prevention, voice authentication, enterprise telephony security, Suraksha Sonic, Voice Shield">
+<meta name="author" content="Suraksha Sonic Enterprise Security Team">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://voice-shield.vercel.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Suraksha Sonic — Real-Time Voice-Clone Interception for Banking Calls">
+<meta property="og:description" content="Detects AI-cloned voices in-stream and freezes wire fraud before the money moves. Carrier-grade telephony cyber defense.">
+<meta property="og:image" content="og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://surakshasonic.example.com/">
+<meta property="og:site_name" content="Suraksha Sonic">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Suraksha Sonic — Real-Time Voice-Clone Interception">
+<meta name="twitter:description" content="Detects AI-cloned voices mid-call and freezes fraud before the money moves.">
+<meta name="twitter:image" content="og-banner.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z' fill='%234C6FFF'/><path d='M8.5 12.2l2.4 2.4 4.8-5' stroke='%230A0D12' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Suraksha Sonic",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Web, Telephony/VoIP",
+  "description": "Real-time AI voice-clone detection and active fraud prevention for banking calls, built on the AASIST spoof-detection model fine-tuned for Indian-accented speech.",
+  "author": {
+    "@type": "Organization",
+    "name": "Team Suraksha Sonic"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="announce">ENTERPRISE TELEPHONY CYBER DEFENSE &nbsp;·&nbsp; <strong>Autonomous Fraud Prevention Gate</strong> &nbsp;·&nbsp; Zero Stored Audio · Sub-90ms Inference</div>
+
+<nav>
+  <div class="wrap row">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" fill="#4C6FFF"/><path d="M8.5 12.2l2.4 2.4 4.8-5" stroke="#0A0D12" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Suraksha Sonic
+    </div>
+    <div class="navlinks">
+      <a href="#problem">Problem</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#model">Benchmarks</a>
+      <a href="#stack">Tech Stack</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="navcta" href="https://voice-shield.onrender.com/" target="_blank" rel="noopener">Open Live Prototype ↗</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tagrow">
+        <span class="tag">In-Stream Voice Biometrics</span>
+        <span class="tag">AASIST Graph Neural Net</span>
+        <span class="tag">Zero Audio Persistence</span>
+      </div>
+      <h1>A cloned voice can approve<br>a wire transfer. <em>We stop it<br>before the money moves.</em></h1>
+      <p class="lede">Suraksha Sonic listens to live banking calls, scores every second of raw audio for synthetic vocoder artifacts using AASIST, and freezes the transaction automatically the moment a clone is detected — not after.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://voice-shield.onrender.com/" target="_blank" rel="noopener">Open Live Prototype ↗</a>
+        <a class="btn btn-ghost" href="#architecture">View Architecture Diagram</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="illustration">
+        <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radial waveform gauge showing live call risk, from genuine (green) to cloned (red)"><circle cx="240.0" cy="240.0" r="104" fill="none" stroke="#1B222C" stroke-width="1"/>
+  <circle cx="240.0" cy="240.0" r="116" fill="#0D1119" stroke="#232A34" stroke-width="1"/>
+  <line x1="240.0" y1="122.0" x2="240.0" y2="48.3" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="247.7" y1="122.3" x2="251.4" y2="66.2" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="255.4" y1="123.0" x2="263.5" y2="61.3" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="263.0" y1="124.3" x2="274.2" y2="67.8" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/><line x1="270.5" y1="126.0" x2="287.6" y2="62.4" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.89"/><line x1="277.9" y1="128.3" x2="296.5" y2="73.7" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.83"/><line x1="285.2" y1="131.0" x2="309.3" y2="72.6" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.83"/><line x1="292.2" y1="134.2" x2="314.3" y2="89.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.90"/><line x1="299.0" y1="137.8" x2="330.7" y2="82.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/><line x1="305.6" y1="141.9" x2="336.3" y2="95.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="311.8" y1="146.4" x2="349.6" y2="97.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="317.8" y1="151.3" x2="363.7" y2="99.0" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="323.4" y1="156.6" x2="361.1" y2="118.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.96"/><line x1="328.7" y1="162.2" x2="369.2" y2="126.7" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.91"/><line x1="333.6" y1="168.2" x2="380.6" y2="132.1" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.85"/><line x1="338.1" y1="174.4" x2="382.3" y2="144.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.81"/><line x1="342.2" y1="181.0" x2="387.0" y2="155.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.88"/><line x1="345.8" y1="187.8" x2="405.5" y2="158.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="349.0" y1="194.8" x2="420.1" y2="165.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="351.7" y1="202.1" x2="404.3" y2="184.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="354.0" y1="209.5" x2="430.2" y2="189.0" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="355.7" y1="217.0" x2="427.5" y2="202.7" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="357.0" y1="224.6" x2="415.5" y2="216.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.93"/><line x1="357.7" y1="232.3" x2="406.9" y2="229.1" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.87"/><line x1="358.0" y1="240.0" x2="419.0" y2="240.0" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.80"/><line x1="357.7" y1="247.7" x2="410.4" y2="251.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.86"/><line x1="357.0" y1="255.4" x2="408.4" y2="262.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.92"/><line x1="355.7" y1="263.0" x2="410.3" y2="273.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="354.0" y1="270.5" x2="431.2" y2="291.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="351.7" y1="277.9" x2="421.1" y2="301.5" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="349.0" y1="285.2" x2="420.5" y2="314.8" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="345.8" y1="292.2" x2="409.6" y2="323.6" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="342.2" y1="299.0" x2="394.5" y2="329.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.89"/><line x1="338.1" y1="305.6" x2="391.1" y2="341.0" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.82"/><line x1="333.6" y1="311.8" x2="374.8" y2="343.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.84"/><line x1="328.7" y1="317.8" x2="375.5" y2="358.8" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.90"/><line x1="323.4" y1="323.4" x2="376.4" y2="376.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/><line x1="317.8" y1="328.7" x2="365.6" y2="383.3" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="311.8" y1="333.6" x2="361.1" y2="397.9" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="305.6" y1="338.1" x2="345.3" y2="397.6" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="299.0" y1="342.2" x2="334.9" y2="404.4" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.96"/><line x1="292.2" y1="345.8" x2="314.1" y2="390.3" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.91"/><line x1="285.2" y1="349.0" x2="303.9" y2="394.2" stroke="#E5484D" stroke-width="3.4" stroke-linecap="round" opacity="0.84"/><line x1="277.9" y1="351.7" x2="293.4" y2="397.2" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.82"/><line x1="270.5" y1="354.0" x2="283.1" y2="400.9" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.88"/><line x1="263.0" y1="355.7" x2="274.2" y2="411.8" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="255.4" y1="357.0" x2="262.8" y2="413.3" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="247.7" y1="357.7" x2="251.9" y2="421.2" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="240.0" y1="358.0" x2="240.0" y2="431.8" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="232.3" y1="357.7" x2="228.1" y2="421.1" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="224.6" y1="357.0" x2="216.8" y2="416.0" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.92"/><line x1="217.0" y1="355.7" x2="207.2" y2="404.9" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.86"/><line x1="209.5" y1="354.0" x2="197.6" y2="398.1" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.80"/><line x1="202.1" y1="351.7" x2="180.3" y2="415.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.86"/><line x1="194.8" y1="349.0" x2="169.3" y2="410.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.92"/><line x1="187.8" y1="345.8" x2="156.7" y2="409.0" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="181.0" y1="342.2" x2="150.9" y2="394.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="174.4" y1="338.1" x2="131.7" y2="402.1" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="168.2" y1="333.6" x2="132.5" y2="380.1" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="162.2" y1="328.7" x2="121.9" y2="374.7" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="156.6" y1="323.4" x2="106.2" y2="373.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.88"/><line x1="151.3" y1="317.8" x2="109.3" y2="354.6" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.82"/><line x1="146.4" y1="311.8" x2="101.5" y2="346.2" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.84"/><line x1="141.9" y1="305.6" x2="87.0" y2="342.2" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.91"/><line x1="137.8" y1="299.0" x2="72.3" y2="336.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.96"/><line x1="134.2" y1="292.2" x2="64.8" y2="326.4" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="131.0" y1="285.2" x2="73.4" y2="309.0" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="128.3" y1="277.9" x2="75.7" y2="295.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="126.0" y1="270.5" x2="67.4" y2="286.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.95"/><line x1="124.3" y1="263.0" x2="70.4" y2="273.7" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.90"/><line x1="123.0" y1="255.4" x2="75.4" y2="261.7" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.84"/><line x1="122.3" y1="247.7" x2="59.3" y2="251.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.82"/><line x1="122.0" y1="240.0" x2="53.1" y2="240.0" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.89"/><line x1="122.3" y1="232.3" x2="62.6" y2="228.4" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="123.0" y1="224.6" x2="50.6" y2="215.1" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="124.3" y1="217.0" x2="58.4" y2="203.9" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="126.0" y1="209.5" x2="46.9" y2="188.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="128.3" y1="202.1" x2="65.9" y2="180.9" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="131.0" y1="194.8" x2="78.9" y2="173.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.92"/><line x1="134.2" y1="187.8" x2="88.8" y2="165.4" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.86"/><line x1="137.8" y1="181.0" x2="92.4" y2="154.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.80"/><line x1="141.9" y1="174.4" x2="98.8" y2="145.6" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.87"/><line x1="146.4" y1="168.2" x2="94.4" y2="128.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.93"/><line x1="151.3" y1="162.2" x2="92.0" y2="110.2" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.97"/><line x1="156.6" y1="156.6" x2="109.2" y2="109.2" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="162.2" y1="151.3" x2="121.4" y2="104.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="168.2" y1="146.4" x2="118.0" y2="81.1" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.98"/><line x1="174.4" y1="141.9" x2="138.7" y2="88.4" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.94"/><line x1="181.0" y1="137.8" x2="156.8" y2="95.8" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.88"/><line x1="187.8" y1="134.2" x2="169.1" y2="96.3" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.81"/><line x1="194.8" y1="131.0" x2="177.0" y2="88.0" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.85"/><line x1="202.1" y1="128.3" x2="181.2" y2="66.7" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.91"/><line x1="209.5" y1="126.0" x2="190.1" y2="53.9" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.96"/><line x1="217.0" y1="124.3" x2="203.9" y2="58.4" stroke="#33C481" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/><line x1="224.6" y1="123.0" x2="217.1" y2="66.1" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="1.00"/><line x1="232.3" y1="122.3" x2="228.0" y2="56.9" stroke="#E3A008" stroke-width="3.4" stroke-linecap="round" opacity="0.99"/>
+  <circle cx="240.0" cy="240.0" r="3" fill="#4C6FFF"/>
+
+  <g id="needle">
+    <line x1="240" y1="240" x2="335" y2="240" stroke="#33C481" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="335" cy="240" r="4.5" fill="#33C481"/>
+  </g>
+</svg>
+        <div class="illustration-caption">
+          <div class="val mono" id="riskVal">4.8%</div>
+          <div class="lab" id="riskLab">RUNNING RISK</div>
+        </div>
+      </div>
+      <div class="scope">
+        <span class="scope-title mono">LIVE_CALL_MONITOR</span>
+        <span class="live-dot"><span></span> streaming</span>
+        <span class="tier-pill" id="tierPill">GREEN · SAFE</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap problem-grid">
+    <div>
+      <div class="bignum">~3s<small>of recorded audio is enough<br>to clone a voice convincingly</small></div>
+    </div>
+    <div class="problem-copy">
+      <div class="section-head" style="margin-bottom:24px;">
+        <span class="eyebrow">THE PROBLEM</span>
+        <h2>Verification methods built for phone calls, not for synthetic ones.</h2>
+      </div>
+      <p>Neural speech synthesis can now reproduce a specific person's voice — accent, cadence, breathing pauses and all — from a few seconds of source audio pulled off a video call, a podcast, or a leaked recording. <strong>Threat actors use this to impersonate CXOs, bank customers, and officials</strong> to authorize transfers or extract confidential information over VoIP and mobile networks.</p>
+      <p>Caller ID, manual call-back, and "I recognize that voice" are the checks most institutions still rely on. None of them were designed to catch a voice that was never spoken by a human being at all.</p>
+
+      <div class="factline">
+        <div class="num">01</div>
+        <p>No mainstream telephony stack scores voice authenticity <strong>while the call is still happening</strong> — most detection is forensic, after the fact.</p>
+      </div>
+      <div class="factline">
+        <div class="num">02</div>
+        <p>Detection built for Western-accented speech degrades badly on Indian English and regional accents — exactly the population most institutions here need to protect.</p>
+      </div>
+      <div class="factline">
+        <div class="num">03</div>
+        <p>An alert alone isn't a defense. Without an action tied to the score, a human still has to notice, decide, and intervene — often too late.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="architecture" style="border-top:1px solid var(--border); padding: 80px 0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">SYSTEM ARCHITECTURE</span>
+      <h2>End-to-End Deepfake Detection &amp; Fraud Interlock</h2>
+      <p>From raw waveform micro-acoustic analysis to autonomous banking ledger freeze in under 90 milliseconds.</p>
+    </div>
+
+    <div style="text-align:center; margin: 32px 0; background: #ffffff; border-radius: 12px; padding: 20px; border: 1px solid var(--border); box-shadow: 0 8px 32px rgba(0,0,0,0.4);">
+      <img src="architecture.png" alt="Suraksha Sonic / Voice Shield Complete System Architecture" style="max-width:100%; height:auto; border-radius:8px; display:block; margin:0 auto;">
+    </div>
+
+    <div class="cards-3" style="margin-top:32px;">
+      <div class="card">
+        <div class="pill pill-green">STEP 1 &amp; 2</div>
+        <h3>Raw SincNet Ingestion</h3>
+        <p>Audio is normalized to 16 kHz mono float32 with a 64,640-sample sliding window. SincNet learnable filterbanks process raw sound waves directly with zero loss of spectral phase detail.</p>
+      </div>
+      <div class="card">
+        <div class="pill pill-amber">STEP 3 &amp; 4</div>
+        <h3>Dual Graph Attention (AASIST)</h3>
+        <p>A heterogeneous graph neural network evaluates both Spectral (frequency jumps/vocoder spikes) and Temporal (speech cadence/missing breaths) nodes, feeding into the Bonafide vs. Spoof decision head.</p>
+      </div>
+      <div class="card">
+        <div class="pill pill-red">STEP 5</div>
+        <h3>EMA Risk &amp; 3-Tier Gate</h3>
+        <p>Dynamic smoother ($0.70 \times \text{Old} + 0.30 \times \text{New}$) prevents coughs or street noise from causing false alarms. Automatically branches into GREEN (<40%), AMBER (40–75% Step-Up OTP), or RED (≥75% Instant Freeze).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>Seven stages, once every second, for the whole call.</h2>
+      <p>Audio never sits still long enough to be "reviewed" — each stage hands off to the next in real time, from the moment the call connects to the moment (if needed) it's cut.</p>
+    </div>
+
+    <div class="pipeline">
+      <div class="stage">
+        <div class="stage-num">01</div>
+        <div class="stage-body">
+          <div><div class="stage-title">Ingestion &amp; account binding</div><div class="stage-file">backend/normalizer.py</div></div>
+          <div class="stage-desc">Telephony or mic audio is captured as 16 kHz 16-bit mono PCM and the caller's number is bound to their account automatically — no manual lookup before analysis can start.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">02</div>
+        <div class="stage-body">
+          <div><div class="stage-title">Sliding ring buffer</div><div class="stage-file">backend/buffer.py</div></div>
+          <div class="stage-desc">A 64,600-sample (~4.04 s) FIFO window slides forward 16,000 samples (1.0 s) at a time, so the model always has fresh context without ever pausing the call.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">03</div>
+        <div class="stage-body">
+          <div><div class="stage-title">AASIST acoustic scoring</div><div class="stage-file">backend/scorer.py · src/models/aasist_core.py</div></div>
+          <div class="stage-desc">A SincNet front-end + graph attention network reads the raw waveform directly and outputs P(spoof) — fine-tuned on IndieFake for Indian-accented speech, 297,866 parameters, ~1.22 MB.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">04</div>
+        <div class="stage-body">
+          <div><div class="stage-title">70/30 EMA risk smoothing</div><div class="stage-file">backend/risk_engine.py</div></div>
+          <div class="stage-desc">RunningRisk(t) = 0.70 × RunningRisk(t−1) + 0.30 × NeuralScore(t) — a cough or a passing horn barely moves the score; a sustained attack ramps it smoothly toward RED.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">05</div>
+        <div class="stage-body">
+          <div><div class="stage-title">Active fraud prevention gate</div><div class="stage-file">backend/fraud_gate.py</div></div>
+          <div class="stage-desc">GREEN (&lt;40%) lets the call proceed. AMBER (40–74%) pauses the transaction and pushes an OTP + security question. RED (≥75%) terminates the call and freezes the account outright.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">06</div>
+        <div class="stage-body">
+          <div><div class="stage-title">Conversational IVR + echo guard</div><div class="stage-file">static/dashboard.html</div></div>
+          <div class="stage-desc">Callers speak naturally ("check my balance", "transfer 50,000"). While the bot's own synthesized reply plays, mic streaming to AASIST pauses — so the system never flags itself.</div>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage-num">07</div>
+        <div class="stage-body">
+          <div><div class="stage-title">Privacy &amp; evidence vault</div><div class="stage-file">Zero-retention design</div></div>
+          <div class="stage-desc">Raw audio is never written to disk, per the DPDP Act 2023 and RBI Cyber Security Framework. On a RED breach, a SHA-256 hash of features + timestamp + account ID is generated as tamper-evident proof.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">MODEL BENCHMARK</span>
+      <h2>Measured on held-out, unseen Indian speakers.</h2>
+      <p>Every number below comes from the fine-tuned checkpoint evaluated against a test split the model never saw during training.</p>
+    </div>
+
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="v">13.48%</div><div class="l">EQUAL ERROR RATE<br>vs. 46.03% ASVspoof baseline</div></div>
+      <div class="stat-cell"><div class="v">95.18%</div><div class="l">ROC-AUC</div></div>
+      <div class="stat-cell"><div class="v">86.4%</div><div class="l">DEEPFAKES BLOCKED<br>653 / 756 held-out clones</div></div>
+      <div class="stat-cell"><div class="v">18.08ms</div><div class="l">MEAN LATENCY / 4s FRAME<br>223× faster than real time</div></div>
+      <div class="stat-cell"><div class="v">297,866</div><div class="l">PARAMETERS<br>~1.22 MB checkpoint</div></div>
+      <div class="stat-cell"><div class="v">&lt;80ms</div><div class="l">WORST-CASE INFERENCE<br>on commodity CPU</div></div>
+      <div class="stat-cell"><div class="v">2.94GB</div><div class="l">PEAK GPU VRAM<br>during evaluation</div></div>
+      <div class="stat-cell"><div class="v">FastAPI</div><div class="l">DEPLOYMENT TARGET<br>WebSocket streaming</div></div>
+    </div>
+
+    <div class="honest-box">
+      <span class="eyebrow">WHAT WE'RE HONEST ABOUT — AND WORKING ON</span>
+      <p>Our held-out test split has 756 deepfake clips but only <strong>30 genuine Indian-voice clips</strong> — a real imbalance we inherited from how IndieFake is composed. That's exactly why precision-on-genuine-voice (20.2%) looks weak next to accuracy (86.4%): a handful of misclassified genuine samples swings that number hard. We're prioritizing collecting more verified genuine Indian-accent audio before the next fine-tune.</p>
+      <p>At our current operating threshold, <strong>103 of 756 clones (13.6%) still slip through as genuine</strong> — consistent with our 13.48% EER, and separately, <strong>4 of 30 genuine voices (13.3%) get misflagged as clones</strong>. The 70/30 EMA and the AMBER step-up tier exist precisely to catch a sustained attack — or recover from a single bad frame — rather than deciding everything off one second of audio.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">TECH STACK</span>
+      <h2>What's actually running underneath.</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-cell">
+        <h4>REAL-TIME API LAYER</h4>
+        <ul>
+          <li>FastAPI <span>Session lifecycle, REST + WebSocket routes</span></li>
+          <li>Uvicorn <span>ASGI server</span></li>
+          <li>WebSockets <span>Bidirectional live call streaming</span></li>
+          <li>Pydantic <span>Request/response validation</span></li>
+        </ul>
+      </div>
+      <div class="stack-cell">
+        <h4>AI / ML CORE</h4>
+        <ul>
+          <li>PyTorch <span>Model runtime &amp; fine-tuning</span></li>
+          <li>AASIST (NAVER Corp., MIT) <span>SincNet + graph attention spoof detector</span></li>
+          <li>torchaudio <span>Waveform I/O</span></li>
+          <li>IndieFake dataset <span>Indian-accent fine-tuning corpus</span></li>
+        </ul>
+      </div>
+      <div class="stack-cell">
+        <h4>SIGNAL &amp; EVAL</h4>
+        <ul>
+          <li>NumPy / SciPy <span>Resampling, spectral diagnostics</span></li>
+          <li>soundfile <span>Audio decode/encode</span></li>
+          <li>scikit-learn <span>EER, ROC-AUC, confusion matrix</span></li>
+          <li>SHA-256 <span>Tamper-evident evidence hashing</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">IMPACT</span>
+      <h2>What changes for the people on the call.</h2>
+    </div>
+    <div class="impact-list">
+      <div class="impact-row">
+        <div class="n">01</div>
+        <div><h5>Fraud stopped mid-call, not after</h5><p>Suspicious transactions are frozen before funds leave the account — not flagged in a report the next morning.</p></div>
+      </div>
+      <div class="impact-row">
+        <div class="n">02</div>
+        <div><h5>Genuine callers barely notice</h5><p>Verified voices pass silently in the background; only suspicious or cloned audio triggers step-up verification.</p></div>
+      </div>
+      <div class="impact-row">
+        <div class="n">03</div>
+        <div><h5>Court-admissible without storing audio</h5><p>SHA-256 evidence hashes give institutions legal proof of a detection event while raw voice data is never retained.</p></div>
+      </div>
+      <div class="impact-row">
+        <div class="n">04</div>
+        <div><h5>Built for Indian voices specifically</h5><p>Fine-tuned on Indian-accented genuine and synthetic speech, not adapted after the fact from a Western-accent model.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">ABOUT</span>
+      <h2>Built by</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">NT</div>
+        <div class="team-info">
+          <h4>Naman Tiwari</h4>
+          <p class="team-role">Developer &amp; ML Engineer</p>
+          <div class="team-links">
+            <a href="mailto:namantiwari2384@gmail.com">📧 namantiwari2384@gmail.com</a>
+            <a href="https://github.com/Naman225" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:4px;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              github.com/Naman225
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="color:var(--ink-faint); font-size:13px; margin-top:32px; font-family:var(--mono);">Enterprise Voice Biometrics &amp; Deepfake Fraud Interlock Platform</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="foot-meta">© 2026 Suraksha Sonic / Voice Shield · Enterprise Carrier-Grade Telephony Protection · DPDP &amp; RBI Compliant</div>
+    <div class="foot-links">
+      <a href="https://voice-shield.onrender.com/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-family:var(--mono); font-size:13px;">Open Live Prototype ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
