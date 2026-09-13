@@ -68,4 +68,4 @@ suraksha-sonic-site/
 
 ## 📄 License & Attribution
 
-Released under the **MIT License**. Created by **Naman Tiwari** (Developer & ML Engineer).
+Released under the **MIT License**.
