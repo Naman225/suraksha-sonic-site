@@ -3,7 +3,7 @@
 ### Enterprise In-Stream Voice Clone Defense & Telephony Fraud Prevention
 **Official Product Showcase & Architecture Overview**
 
-[![Live Demo](https://img.shields.io/badge/Live_Prototype-Available-00C781?style=for-the-badge&logo=render)](https://voice-shield.onrender.com/)
+[![Live Demo](https://img.shields.io/badge/Live_Prototype-Available-00C781?style=for-the-badge&logo=render)](https://voice-shield-kf0h.onrender.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
@@ -45,7 +45,7 @@ Modern telephony networks and banking contact centres are under unprecedented th
 
 ## 🔗 Live Deployments
 
-- 🖥️ **Live Operator SOC Console (Render)**: [https://voice-shield.onrender.com/](https://voice-shield.onrender.com/)
+- 🖥️ **Live Operator SOC Console (Render)**: [https://voice-shield-kf0h.onrender.com/](https://voice-shield-kf0h.onrender.com/)
 - 🌐 **Marketing Showcase Site (Vercel)**: Deployed via this repository.
 - 📦 **Backend ML & Ingestion Engine**: [github.com/Naman225/voice-shield](https://github.com/Naman225/voice-shield)
 
